@@ -1,5 +1,4 @@
 
-
 const Fosters = () => {
     return (
       <div className="bg" style={{ textAlign:"center" }}>
