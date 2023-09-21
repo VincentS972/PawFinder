@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <div className="footer">
-      <h4 style={{ color: "#564256", textAlign: "center", marginBottom: "10px" }}>
+      <h4 style={{ color: "white", textAlign: "center", marginBottom: "10px" }}>
         Follow us on Social Media !
       </h4>
       <div>
@@ -28,7 +28,7 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      <div>
+      <div style={{ color:"white" }}>
         <p> Copyright © 2023 | PawFinder</p>
       </div>
     </div>

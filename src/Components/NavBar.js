@@ -6,7 +6,7 @@ import { Nav } from "react-bootstrap";
 function NavBar() {
     return (
         <div style={{ top:"0", position:"sticky", zIndex:"1" }}>
-            <Nav className="justify-content-center" style={{ backgroundColor:"lightgrey", fontSize:"40px" }}  defaultActiveKey="/home">
+            <Nav className="justify-content-center" style={{ backgroundColor:"#132d5b", fontSize:"40px" }}  defaultActiveKey="/home">
                     <Navbar className="bg-body-tertiary">
                     <Container>
                       <Navbar.Brand href="/">
@@ -21,16 +21,16 @@ function NavBar() {
                     </Container>
                   </Navbar>
                 <Nav.Item >
-                 <Nav.Link style={{ color: 'inherit', textDecoration: 'inherit' }} href="/">Home</Nav.Link>
+                 <Nav.Link style={{ color: 'white', textDecoration: 'inherit' }} href="/">Home</Nav.Link>
                  </Nav.Item>
                  <Nav.Item>
-                 <Nav.Link style={{ color: 'inherit', textDecoration: 'inherit'}} href="/Pets">Our Pets</Nav.Link>
+                 <Nav.Link style={{ color: 'white', textDecoration: 'inherit'}} href="/Pets">Our Pets</Nav.Link>
                  </Nav.Item>
                  <Nav.Item>
-                 <Nav.Link style={{ color: 'inherit', textDecoration: 'inherit'}} href="/Fosters">Our Fosters</Nav.Link>
+                 <Nav.Link style={{ color: 'white', textDecoration: 'inherit'}} href="/Fosters">Our Fosters</Nav.Link>
                  </Nav.Item>
                  <Nav.Item>
-                 <Nav.Link style={{ color: 'inherit', textDecoration: 'inherit'}} href="/PetCare">Pet Care</Nav.Link>
+                 <Nav.Link style={{ color: 'white', textDecoration: 'inherit'}} href="/PetCare">Pet Care</Nav.Link>
                  </Nav.Item>
            </Nav>
        </div>
