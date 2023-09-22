@@ -1,6 +1,6 @@
 function MissionStatement() {
     return (
-        <div style={{color:"white"}}>
+        <div style={{ color:"white", fontSize:"1.5em" }}>
             <p className='card-text'>
                 Our Mission at PawFinder is to create happily-ever-afters, one paw at a time. We are dedicated to finding loving, furever homes for abandoned and homeless pets in need. Our unique and compassionate approach has led to a remarkable 98% furever placement success rate, filling countless lives with joy and wagging tails.
             </p>

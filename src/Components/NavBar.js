@@ -1,12 +1,12 @@
-import { NavbarBrand } from "react-bootstrap";
 import Navbar from "react-bootstrap/Navbar";
+import { NavbarBrand } from "react-bootstrap";
 import Container from 'react-bootstrap/Container';
 import { Nav } from "react-bootstrap";
 
 function NavBar() {
     return (
         <div style={{ top:"0", position:"sticky", zIndex:"1" }}>
-            <Nav className="justify-content-center" style={{ backgroundColor:"#132d5b", fontSize:"40px" }}  defaultActiveKey="/home">
+            <Nav className="justify-content-center" style={{ backgroundColor:"#8abcdd", fontSize:"40px" }}  defaultActiveKey="/home">
                     <Navbar className="bg-body-tertiary">
                     <Container>
                       <Navbar.Brand href="/">
@@ -31,6 +31,9 @@ function NavBar() {
                  </Nav.Item>
                  <Nav.Item>
                  <Nav.Link style={{ color: 'white', textDecoration: 'inherit'}} href="/PetCare">Pet Care</Nav.Link>
+                 </Nav.Item>
+                 <Nav.Item >
+                 <Nav.Link style={{ color: 'white', textDecoration: 'inherit' }} href="/About">About</Nav.Link>
                  </Nav.Item>
            </Nav>
        </div>
