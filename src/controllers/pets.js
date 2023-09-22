@@ -1,5 +1,5 @@
-const router = require("express").Router();
-const db = require("../models");
+const router = require('express').Router();
+const db = require("../models/Pet");
 const {Pet} = db
 // routes
 
@@ -57,8 +57,6 @@ router.delete('/:id', async function (req, res) {
   } 
 });
 
-module.exports = router;
-
 // seeds pets
 
 router.get('/data/seed', async function (req, res) {
@@ -114,4 +112,4 @@ router.get('/data/seed', async function (req, res) {
   res.status(303).redirect('/pets');
 });
 
-module.exports = router
+module.exports = router;

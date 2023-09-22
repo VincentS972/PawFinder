@@ -1,8 +1,8 @@
-require('dotenv').config();
-const express = require('express');
-const mongoose = require('mongoose');
-const bodyParser = require('body-parser');
-const cors = require('cors');
+require('dotenv').config()
+const express = require('express')
+// const mongoose = require('mongoose')
+const bodyParser = require('body-parser')
+const cors = require('cors')
 const app = express();
 
 // import React from 'react';
@@ -19,17 +19,17 @@ app.use(bodyParser.json())
 
 // Routes
 app.use(express.urlencoded({ extended: true }))
-app.use('/pets', require('./controllers/pet'));
+app.use('/pets', require('./controllers/pets'))
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
     <App />
 );
 
 // DB Connection
-mongoose.connect(process.env.MONGO_URI, { UseNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('DB connected'))
-  .catch(err => console.error(err));
+// mongoose.connect(process.env.MONGO_URI, { UseNewUrlParser: true, useUnifiedTopology: true })
+//   .then(() => console.log('DB connected'))
+//   .catch(err => console.error(err))
 
 const PORT = process.env.PORT 
 
