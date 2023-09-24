@@ -1,23 +1,24 @@
+const express = require('express');
+const mongoose = require('mongoose');
+const cors = require('cors');
+// require('dotenv').config(); *******CAUSING 3 ERRORS**********
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App';
 
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
-require('dotenv').config();
 
 const petRoutes = require('./controllers/pet');
 
 const app = express();
 
-// Middleware
+Middleware
 app.use(express.json());
 app.use(cors());
 
-// Routes
+Routes
 app.use('/pets', petRoutes);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
