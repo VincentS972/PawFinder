@@ -1,18 +1,6 @@
-
-//const Pets = () => {
-   // return (
-     // <div className="bg" style={{textAlign:"center"}} >
-     //   <h1>This is the pet page</h1>
-     // </div>
-   // );
- // };
-  //import Button from 'react-bootstrap/Button';
-//import Card from 'react-bootstrap/Card';
-
-
-
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
+import Button from 'react-bootstrap/Button';
 
 function card1() {
   
@@ -32,8 +20,7 @@ function card1() {
         <ListGroup.Item>Age: 3</ListGroup.Item>
       </ListGroup>
       <Card.Body>
-      <Card.Link href="#"><button>Adopt me!</button></Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
+      <Card.Link href="#"><Button variant="outline-primary">Adopt me!</Button>{' '}</Card.Link>
       </Card.Body>
     </Card>
 
@@ -51,8 +38,7 @@ function card1() {
         <ListGroup.Item>Age: 1</ListGroup.Item>
       </ListGroup>
       <Card.Body>
-      <Card.Link href="#"><button>Adopt me!</button></Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
+      <Card.Link href="#"><Button variant="outline-primary">Adopt me!</Button>{' '}</Card.Link>
       </Card.Body>
     </Card>
 
@@ -70,8 +56,7 @@ function card1() {
         <ListGroup.Item>Age: 1</ListGroup.Item>
       </ListGroup>
       <Card.Body>
-      <Card.Link href="#"><button>Adopt me!</button></Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
+      <Card.Link href="#"><Button variant="outline-primary">Adopt me!</Button>{' '}</Card.Link>
       </Card.Body>
     </Card>
 
@@ -89,8 +74,7 @@ function card1() {
         <ListGroup.Item>Age: 2</ListGroup.Item>
       </ListGroup>
       <Card.Body>
-      <Card.Link href="#"><button>Adopt me!</button></Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
+      <Card.Link href="#"><Button variant="outline-primary">Adopt me!</Button>{' '}</Card.Link>
       </Card.Body>
     </Card>
 
@@ -108,8 +92,7 @@ function card1() {
         <ListGroup.Item>Age: 3</ListGroup.Item>
       </ListGroup>
       <Card.Body>
-      <Card.Link href="#"><button>Adopt me!</button></Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
+      <Card.Link href="#"><Button variant="outline-primary">Adopt me!</Button>{' '}</Card.Link>
       </Card.Body>
     </Card>
 
@@ -127,8 +110,7 @@ function card1() {
         <ListGroup.Item>Age: 4</ListGroup.Item>
       </ListGroup>
       <Card.Body>
-        <Card.Link href="#"><button>Adopt me!</button></Card.Link>
-        <Card.Link href="#">Another Link</Card.Link>
+      <Card.Link href="#"><Button variant="outline-primary">Adopt me!</Button>{' '}</Card.Link>
       </Card.Body>
     </Card>
 
