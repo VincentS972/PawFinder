@@ -11,15 +11,13 @@ function New() {
   const navigate = useNavigate()
 
   const [petInput, setPetInput] = useState({
-    petType: "",
+    profilePicture: "",
     petName: "",
-    isAdopted: "",
-    gender: "",
-    breed: "",
-    color: "",
-    age: "",
-    image: "",
-    bio: "",
+    fosterName: "",
+    petGender: "",
+    petType: "",
+    petAge: "",
+    petBio: "",
   });
 
   const handleChange = (e) => {
@@ -54,7 +52,7 @@ function New() {
             <Form.Label>
                 Please input the URL for an image of the pet: 
             </Form.Label>
-            <Form.Control type="text" name="petImage" placeholder="Pet image URL" value={petInput.petImage} onChange={handleChange} style={{textAlign:'center'}}/>
+            <Form.Control type="text" name="profilePicture" placeholder="Pet image URL" value={petInput.profilePicture} onChange={handleChange} style={{textAlign:'center'}}/>
           </Form.Group>
 
           <Form.Group as={Col} style={{textAlign:'center'}}>
@@ -94,13 +92,6 @@ function New() {
             </Form.Select>
           </Form.Group>
         </Row>
-
-          <Form.Group as={Col} style={{textAlign:'center'}}>
-            <Form.Label>
-              Please input the pet's breed:
-            </Form.Label>
-            <Form.Control type="text" name="petBreed" placeholder="Pet breed" maxLength={15} value={petInput.petBreed} onChange={handleChange} required style={{textAlign:'center'}}/>
-          </Form.Group>
 
           <Form.Group as={Col} style={{textAlign:'center'}}>
             <Form.Label>
