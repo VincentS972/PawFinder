@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import NavigationBar from './Navbar';
+import NavBar from './NavBar';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
@@ -101,4 +101,4 @@ return (
 )
 }
 
-export default UpdatenewFoster
+export default UpdateFoster
