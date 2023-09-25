@@ -54,7 +54,7 @@ const Pet = () => {
     </div>
   );
 
-  return <div>{display}</div>;
+  return <div className="bg" >{display}</div>;
 };
 
 export default Pet;
