@@ -24,12 +24,12 @@ fetchData()
 }, [id, URL])
 
 const deleteProfile = async () => {
-  const URL = `${process.env.REACT_APP_BACKEND_URI}/fosters/${id}`
+  const URL = `${process.env.REACT_APP_BACKEND_URI}/foster/${id}`
   const response = await fetch(URL, {
       method: 'DELETE'
   })
   navigate('/foster');
-  if (response.status !==204) console.log('error')   
+  if (response.status !==204) console.log('error')
 }
 
 const handleChange = (e) => {
