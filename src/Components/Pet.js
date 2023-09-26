@@ -12,9 +12,9 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
-const Pet = () => {
+function Pet() {
   const navigate = useNavigate();
-  const [pet, setPet] = useState([]);
+  const [pets, setPets] = useState([]);
 
   const { id } = useParams();
 
@@ -23,7 +23,7 @@ const Pet = () => {
       const URL = `${process.env.REACT_APP_BACKEND_URI}/pet/${id}`
       const response = await fetch(URL);
       const data = await response.json();
-      setPet(data);
+      setPets(data);
     }
     fetchData()
   }, []);
@@ -37,7 +37,7 @@ const Pet = () => {
     navigate("/");
   };
 
-  const display = pet && (
+  const display = pets.map(pet => {
     <div className="bg" style={{ textAlign: "center" }}>
       <div style={{ margin: "auto" }}>
         <h1>{pet.petName}</h1>
@@ -52,7 +52,7 @@ const Pet = () => {
         <button onClick={handleDelete}>Delete</button>
       </div>
     </div>
-  );
+  });
 
   return <div>{display}</div>;
 };
