@@ -10,6 +10,7 @@ import About from "./Components/About";
 import PetCare from "./Components/PetCare"
 import UpdatePet from "./Components/UpdatePet";
 import UpdateFoster from "./Components/UpdateFoster";
+import New from "./Components/New"
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/Pet" element={<Pet />} />
             <Route path="/Pet/update/:id" element={<UpdatePet/>}/>
+            <Route path="/New" element={<New />} />
             <Route path="/Foster" element={<Foster />} />
             <Route path="/Foster/update/:id" element={<UpdateFoster/>}/>
             <Route path="/PetCare" element={<PetCare />} />
