@@ -23,6 +23,15 @@ useEffect(() => {
 fetchData()
 }, [id, URL])
 
+const deleteProfile = async () => {
+  const URL = `${process.env.REACT_APP_BACKEND_URI}/pets/${id}`
+  const response = await fetch(URL, {
+      method: 'DELETE'
+  })
+  navigate('/');
+  if (response.status !==204) console.log('error')   
+}
+
 const handleChange = (e) => {
     const value = e.target.value;
       setPetInput({
@@ -137,6 +146,7 @@ const display = petInput && (
         <Form.Group className='mb-3 mx-auto w-50' style={{textAlign: 'center'}}>
           <p>All fields are required.</p>
           <Button type='submit' variant='success'>Submit</Button>
+          <Button variant='danger' onClick={deleteProfile}>Delete Profile</Button>
         </Form.Group>
       </Form>
     </div>
