@@ -4,10 +4,10 @@ import { useParams, useNavigate } from 'react-router-dom'
 function UpdatePet () {
     const navigate = useNavigate()
 
-    const [profileInput, setProfileInput] = useState(null)
+    const [profileInput, setProfileInput] = useState({})
 
     const { id } = useParams()
-    const URL = `${process.env.REACT_APP_BACKEND_URI}/pet/${id}`
+    const URL = `${process.env.REACT_APP_BACKEND_URI}/pets/${id}`
 
     useEffect(() => {
         const fetchData = async () => {

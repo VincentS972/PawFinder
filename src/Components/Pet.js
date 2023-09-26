@@ -14,19 +14,19 @@ import { useParams, useNavigate } from "react-router-dom";
 
 const Pet = () => {
   const navigate = useNavigate();
-  const [pet, setPet] = useState(undefined);
+  const [pet, setPet] = useState([]);
 
   const { id } = useParams();
-  const URL = `${process.env.REACT_APP_BACKEND_URI}/pet/${id}`;
 
   useEffect(() => {
     const fetchData = async () => {
+      const URL = `${process.env.REACT_APP_BACKEND_URI}/pet/${id}`
       const response = await fetch(URL);
       const data = await response.json();
       setPet(data);
-    };
-    fetchData();
-  }, [id, URL]);
+    }
+    fetchData()
+  }, []);
 
   //deletes the current profile from database
   const handleDelete = async (e) => {
