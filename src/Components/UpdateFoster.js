@@ -2,17 +2,16 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import NavigationBar from './Navbar';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
-function UpdatePet() {
+function UpdatenewFoster() {
     const navigate = useNavigate()
 
     const [petInput, setPetInput] = useState({})
 
     const { id } = useParams()
-    const URL = `${process.env.REACT_APP_BACKEND_URI}/pets/${id}`
+    const URL = `${process.env.REACT_APP_BACKEND_URI}/fosters/${id}`
 
 useEffect(() => {
     const fetchData = async () => {
@@ -40,11 +39,11 @@ const response = await fetch(URL, {
     body: JSON.stringify(petInput)
 })
     if (response.status !== 204) console.log('error!') // add error handling later
-        navigate(`/pets/${id}`)
+        navigate(`/fosters/${id}`)
 }
 
 
-// Update Pet Form
+// Update Foster Form
 
 const display = petInput && (
     <div className = "container-lg font-nice">
@@ -101,4 +100,4 @@ return (
 )
 }
 
-export default UpdatenewFoster
+export default UpdatenewFoster;
