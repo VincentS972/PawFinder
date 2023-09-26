@@ -1,9 +1,8 @@
 import BackgroundImagePage from "./BackgroungImagePage";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+// import Carousel from "react-multi-carousel";
+// import "react-multi-carousel/lib/styles.css";
 
 const Home = () => {
-
   return (
   <div className="bg">
   </div>

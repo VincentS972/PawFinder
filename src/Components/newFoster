@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 
 
-function New() {
+function newFoster() {
   const navigate = useNavigate()
 
   const [fosterInput, setFosterInput] = useState({
@@ -89,4 +89,4 @@ function New() {
   );
 }
 
-export default New
+export default newFoster

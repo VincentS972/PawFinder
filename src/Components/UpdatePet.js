@@ -23,6 +23,15 @@ useEffect(() => {
 fetchData()
 }, [id, URL])
 
+const deleteProfile = async () => {
+  const URL = `${process.env.REACT_APP_BACKEND_URI}/pets/${id}`
+  const response = await fetch(URL, {
+      method: 'DELETE'
+  })
+  navigate('/pet');
+  if (response.status !==204) console.log('error')   
+}
+
 const handleChange = (e) => {
     const value = e.target.value;
       setPetInput({
@@ -39,7 +48,7 @@ const response = await fetch(URL, {
     body: JSON.stringify(petInput)
 })
     if (response.status !== 204) console.log('error!') // add error handling later
-        navigate(`/pets/${id}`)
+        navigate(`/pet`)
 }
 
 
@@ -47,7 +56,6 @@ const response = await fetch(URL, {
 
 const display = petInput && (
 <div className = "container-lg font-nice">
-      {<NavigationBar/>}
       <Form className='p-3' onSubmit={handleSubmit} style={{backgroundColor:'#B5EB8D', color:"#217605"}} >
         <Row className='mb-3'>
           <Form.Group as={Col} style={{textAlign:'center'}}>
@@ -138,6 +146,7 @@ const display = petInput && (
         <Form.Group className='mb-3 mx-auto w-50' style={{textAlign: 'center'}}>
           <p>All fields are required.</p>
           <Button type='submit' variant='success'>Submit</Button>
+          <Button variant='danger' onClick={deleteProfile}>Delete Profile</Button>
         </Form.Group>
       </Form>
     </div>
