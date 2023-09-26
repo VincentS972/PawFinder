@@ -38,7 +38,7 @@ function New() {
     })
     const data = await response.json()
     console.log('response', data)
-    navigate('/')
+    navigate('/pet')
   }
 
   //New Pet Form  

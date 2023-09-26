@@ -28,7 +28,7 @@ const deleteProfile = async () => {
   const response = await fetch(URL, {
       method: 'DELETE'
   })
-  navigate('/');
+  navigate('/pet');
   if (response.status !==204) console.log('error')   
 }
 
