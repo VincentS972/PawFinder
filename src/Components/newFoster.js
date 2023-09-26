@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 
 
-function newFoster() {
+function NewFoster() {
   const navigate = useNavigate()
 
   const [fosterInput, setFosterInput] = useState({
@@ -27,7 +27,7 @@ function newFoster() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    const URL = `${process.env.REACT_APP_BACKEND_URI}/fosters`
+    const URL = `${process.env.REACT_APP_BACKEND_URI}/foster`
     console.log('foster input', fosterInput)
     const response = await fetch(URL, {
       method: 'POST', 
@@ -36,13 +36,12 @@ function newFoster() {
     })
     const data = await response.json()
     console.log('response', data)
-    navigate('/')
+    navigate('/foster')
   }
 
   //New Foster Form  
   return (
     <div className = "container-lg font-nice">
-      {<NavigationBar/>}
       <Form className='p-3' onSubmit={handleSubmit} style={{backgroundColor:'#B5EB8D', color:"#217605"}} >
         <Row className='mb-3'>
           <Form.Group as={Col} style={{textAlign:'center'}}>
@@ -79,6 +78,12 @@ function newFoster() {
             </Form.Label>
             <Form.Control type="text" name="emailAddress" placeholder="Foster's Email Address" value={fosterInput.emailAddress} maxLength={20} onChange={handleChange} required style={{textAlign:'center'}}/>
           </Form.Group>
+          <Form.Group as={Col} style={{textAlign:'center'}}>
+            <Form.Label>
+                Please input the foster's password:
+            </Form.Label>
+            <Form.Control type="text" name="password" placeholder="Foster's Password" value={fosterInput.password} maxLength={20} onChange={handleChange} required style={{textAlign:'center'}}/>
+          </Form.Group>
         </Row>
         <Form.Group className='mb-3 mx-auto w-50' style={{textAlign: 'center'}}>
           <p>All fields are required.</p>
@@ -89,4 +94,4 @@ function newFoster() {
   );
 }
 
-export default newFoster
+export default NewFoster
