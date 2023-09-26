@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import React from "react";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
@@ -66,7 +67,7 @@ function Pet() {
   });
 
   return (
-    <div>
+    <div style={{display: "flex"}}>
       {display}
     </div>
   );

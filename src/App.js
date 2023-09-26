@@ -6,6 +6,7 @@ import Home from "./Components/Home";
 import Footer from "./Components/Footer";
 import Pet from "./Components/Pet";
 import PetProfile from './Components/PetProfile';
+import NewFoster from './Components/newFoster';
 import Foster from "./Components/Foster";
 import FosterProfile from './Components/FosterProfile';
 import About from "./Components/About";
@@ -29,6 +30,7 @@ function App() {
             <Route path="/Foster" element={<Foster />} />
             <Route path="/Foster/FosterProfile" element={<FosterProfile />} />
             <Route path="/Foster/update/:id" element={<UpdateFoster/>}/>
+            <Route path="/newFoster" element={<NewFoster />} />
             <Route path="/PetCare" element={<PetCare />} />
             <Route path="/About" element={<About />} />
           </Routes>

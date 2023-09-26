@@ -24,6 +24,5 @@ body, html {
 }
 
 .wrapper {
-  display: grid;
-  text-align: center;
+  display: "flex";
 }
