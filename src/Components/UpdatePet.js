@@ -39,7 +39,7 @@ const response = await fetch(URL, {
     body: JSON.stringify(petInput)
 })
     if (response.status !== 204) console.log('error!') // add error handling later
-        navigate(`/pets/${id}`)
+        navigate(`/pet`)
 }
 
 
@@ -47,7 +47,6 @@ const response = await fetch(URL, {
 
 const display = petInput && (
 <div className = "container-lg font-nice">
-      {<NavigationBar/>}
       <Form className='p-3' onSubmit={handleSubmit} style={{backgroundColor:'#B5EB8D', color:"#217605"}} >
         <Row className='mb-3'>
           <Form.Group as={Col} style={{textAlign:'center'}}>

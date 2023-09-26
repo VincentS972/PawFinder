@@ -22,106 +22,44 @@ function Pet() {
   const display = pets.map(pet => {
     return (
       <div style={{ textAlign:"center", display:"flex" }}>
-      <Card style={{ 
-        width: '18rem',
-        display: 'inline-block',
-        margin: '5px',
-      }} key={pet._id}>
-        <Card.Img variant="top" src={pet.profilePicture} />
-        <Card.Body>
-          <Card.Title>{pet.petName}</Card.Title>
-          <Card.Text>
-            {pet.petBio}
-          </Card.Text>
-          <Link to={`/new`} style={{color:'blue'}}>
-            <h5 style={{textAlign:'center', marginTop: '8px', color:'blue'}}>New Pet</h5>
-          </Link>
-          <Link to={`/pets/${pet._id}`} style={{color:'blue'}}>
-            <h5 style={{textAlign:'center', marginTop: '8px', color:'blue'}}>Pet Info</h5>
-          </Link>
-          {/* <Button variant="primary">Adopt Me</Button> */}
-        </Card.Body>
-      </Card>
-      {/* <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src="https://images.pexels.com/photos/4056462/pexels-photo-4056462.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-        <Card.Body>
-          <Card.Title>random placeholder dog</Card.Title>
-          <Card.Text>
-            Come adopt this dog because hes super cool!!!
-          </Card.Text>
-          <Button variant="primary">Adopt Me</Button>
-        </Card.Body>
-      </Card>
-      <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src="https://images.pexels.com/photos/4056462/pexels-photo-4056462.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-        <Card.Body>
-          <Card.Title>random placeholder dog</Card.Title>
-          <Card.Text>
-            Come adopt this dog because hes super cool!!!
-          </Card.Text>
-          <Button variant="primary">Adopt Me</Button>
-        </Card.Body>
-      </Card>
-      <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src="https://images.pexels.com/photos/4056462/pexels-photo-4056462.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-        <Card.Body>
-          <Card.Title>random placeholder dog</Card.Title>
-          <Card.Text>
-            Come adopt this dog because hes super cool!!!
-          </Card.Text>
-          <Button variant="primary">Adopt Me</Button>
-        </Card.Body>
-      </Card>
-      <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src="https://images.pexels.com/photos/4056462/pexels-photo-4056462.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-        <Card.Body>
-          <Card.Title>random placeholder dog</Card.Title>
-          <Card.Text>
-            Come adopt this dog because hes super cool!!!
-          </Card.Text>
-          <Button variant="primary">Adopt Me</Button>
-        </Card.Body>
-      </Card>
-      <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src="https://images.pexels.com/photos/4056462/pexels-photo-4056462.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-        <Card.Body>
-          <Card.Title>random placeholder dog</Card.Title>
-          <Card.Text>
-            Come adopt this dog because hes super cool!!!
-          </Card.Text>
-          <Button variant="primary">Adopt Me</Button>
-        </Card.Body>
-      </Card>
-      <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src="https://images.pexels.com/photos/4056462/pexels-photo-4056462.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-        <Card.Body>
-          <Card.Title>random placeholder dog</Card.Title>
-          <Card.Text>
-            Come adopt this dog because hes super cool!!!
-          </Card.Text>
-          <Button variant="primary">Adopt Me</Button>
-        </Card.Body>
-      </Card>
-      <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src="https://images.pexels.com/photos/4056462/pexels-photo-4056462.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-        <Card.Body>
-          <Card.Title>random placeholder dog</Card.Title>
-          <Card.Text>
-            Come adopt this dog because hes super cool!!!
-          </Card.Text>
-          <Button variant="primary">Adopt Me</Button>
-        </Card.Body>
-      </Card>
-      <Card style={{ width: '18rem' }}>
-        <Card.Img variant="top" src="https://images.pexels.com/photos/4056462/pexels-photo-4056462.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-        <Card.Body>
-          <Card.Title>random placeholder dog</Card.Title>
-          <Card.Text>
-            Come adopt this dog because hes super cool!!!
-          </Card.Text>
-          <Button variant="primary">Adopt Me</Button>
-        </Card.Body>
-      </Card> */}
+        <Card style={{ 
+          width: '18rem',
+          display: 'inline-block',
+          margin: '5px',
+        }} key={pet._id}>
+          <Card.Img variant="top" src={pet.profilePicture} />
+          <Card.Body>
+            <Card.Title>
+              <Link to={`/pets/${pet._id}`} style={{color:'blue'}}>
+                <h5 style={{textAlign:'center', marginTop: '8px', color:'blue'}}>{pet.petName}</h5>
+              </Link>
+            </Card.Title>
+            <Card.Text>
+              <Link to={`/foster`} style={{color:'blue'}}>
+                <h5 style={{textAlign:'center', marginTop: '8px', color:'blue'}}>Foster Parent: {pet.fosterName}</h5>
+              </Link>
+            </Card.Text>
+            <Card.Text>
+              Bio: {pet.petBio}
+            </Card.Text>
+            <Button>
+              <Link to={`/`} style={{color:'blue'}}>
+                <h5 style={{textAlign:'center', margin: '5px', marginTop: '8px', color:'blue'}}>Adopt</h5>
+              </Link>
+            </Button>
+            <Button>
+              <Link to={`/pet/update/${pet._id}`} style={{color:'blue'}}>
+                <h5 style={{textAlign:'center', margin: '5px', marginTop: '8px', color:'blue'}}>Edit Profile</h5>
+              </Link>
+            </Button>
+            <Button>
+              <Link to={`/new`} style={{color:'blue'}}>
+                <h5 style={{textAlign:'center', margin: '5px', marginTop: '8px', color:'blue'}}>New Profile</h5>
+              </Link>
+            </Button>
+            {/* <Button variant="primary">Adopt Me</Button> */}
+          </Card.Body>
+        </Card>
       </div>
     );
   });
