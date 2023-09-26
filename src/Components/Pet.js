@@ -1,26 +1,26 @@
+import { Link } from "react-router-dom";
 import React from "react";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { useParams, useNavigate } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 function Pet() {
   const [pets, setPets] = useState([])
+  
 
   useEffect(() => {
     const fetchData = async () => {
-      const URL = `${process.env.REACT_APP_BACKEND_URI}/pets`
+      const URL = `${process.env.REACT_APP_BACKEND_URI}/pet`
       const response = await fetch(URL)
       const data = await response.json()
       setPets(data)
-    }
+    };
 
-    fetchData()
-  }, [])
+    fetchData();
+  }, []);
 
-  const display = pets.map(pet => {
-    return (
+  const display = pets.map(pet => {(
+    <div className="wrapper">
       <div style={{ textAlign:"center", display:"flex" }}>
         <Card style={{ 
           width: '18rem',
@@ -61,14 +61,15 @@ function Pet() {
           </Card.Body>
         </Card>
       </div>
+      </div>
     );
   });
 
   return (
-    <div className="">
+    <div>
       {display}
     </div>
-  )
+  );
 }
 
 // const Pet = () => {

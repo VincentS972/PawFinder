@@ -17,6 +17,7 @@ import Card from 'react-bootstrap/Card';
 
 function Foster() {
   return (
+    <div className="wrapper">
     <div style={{ textAlign:"center", display:"flex" }}>
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src="https://images.unsplash.com/photo-1553322378-eb94e5966b0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80" />
@@ -110,7 +111,7 @@ function Foster() {
         <Button variant="primary">Contact Me</Button>
       </Card.Body>
     </Card>
-    
+    </div>
     </div>
     
   );
