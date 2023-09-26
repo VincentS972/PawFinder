@@ -5,6 +5,7 @@ import Navbar from './Components/NavBar';
 import Home from "./Components/Home";
 import Footer from "./Components/Footer";
 import Pet from "./Components/Pet";
+import NewFoster from './Components/newFoster';
 import Foster from "./Components/Foster";
 import About from "./Components/About";
 import PetCare from "./Components/PetCare"
@@ -25,6 +26,7 @@ function App() {
             <Route path="/New" element={<New />} />
             <Route path="/Foster" element={<Foster />} />
             <Route path="/Foster/update/:id" element={<UpdateFoster/>}/>
+            <Route path="/newFoster" element={<NewFoster />} />
             <Route path="/PetCare" element={<PetCare />} />
             <Route path="/About" element={<About />} />
           </Routes>

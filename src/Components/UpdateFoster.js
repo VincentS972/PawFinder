@@ -5,28 +5,37 @@ import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
-function UpdatenewFoster() {
+function UpdateNewFoster() {
     const navigate = useNavigate()
 
-    const [petInput, setPetInput] = useState({})
+    const [fosterInput, setFosterInput] = useState({})
 
     const { id } = useParams()
-    const URL = `${process.env.REACT_APP_BACKEND_URI}/fosters/${id}`
+    const URL = `${process.env.REACT_APP_BACKEND_URI}/foster/${id}`
 
 useEffect(() => {
     const fetchData = async () => {
     const response = await fetch(URL)
     const data = await response.json()
-    setPetInput(data)
+    setFosterInput(data)
 }
 
 fetchData()
 }, [id, URL])
 
+const deleteProfile = async () => {
+  const URL = `${process.env.REACT_APP_BACKEND_URI}/foster/${id}`
+  const response = await fetch(URL, {
+      method: 'DELETE'
+  })
+  navigate('/foster');
+  if (response.status !==204) console.log('error')
+}
+
 const handleChange = (e) => {
     const value = e.target.value;
-      setPetInput({
-      ...petInput,
+      setFosterInput({
+      ...fosterInput,
       [e.target.name]: value
       });
 }
@@ -36,18 +45,17 @@ const handleSubmit = async (e) => {
 const response = await fetch(URL, {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(petInput)
+    body: JSON.stringify(fosterInput)
 })
     if (response.status !== 204) console.log('error!') // add error handling later
-        navigate(`/fosters/${id}`)
+        navigate(`/foster`)
 }
 
 
 // Update Foster Form
 
-const display = petInput && (
+const display = fosterInput && (
     <div className = "container-lg font-nice">
-    {<NavigationBar/>}
     <Form className='p-3' onSubmit={handleSubmit} style={{backgroundColor:'#B5EB8D', color:"#217605"}} >
       <Row className='mb-3'>
         <Form.Group as={Col} style={{textAlign:'center'}}>
@@ -88,6 +96,7 @@ const display = petInput && (
       <Form.Group className='mb-3 mx-auto w-50' style={{textAlign: 'center'}}>
         <p>All fields are required.</p>
         <Button type='submit' variant='success'>Submit</Button>
+        <Button variant='danger' onClick={deleteProfile}>Delete Profile</Button>
       </Form.Group>
     </Form>
   </div>
@@ -100,4 +109,4 @@ return (
 )
 }
 
-export default UpdatenewFoster;
+export default UpdateNewFoster;
