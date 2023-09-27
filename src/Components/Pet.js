@@ -45,16 +45,6 @@ function Pet() {
                   <h5 style={{textAlign:'center', margin: '5px', marginTop: '8px', color:'blue'}}>Adopt</h5>
                 </Link>
               </Button>
-              <Button>
-                <Link to={`/pet/update/${pet._id}`} style={{color:'blue'}}>
-                  <h5 style={{textAlign:'center', margin: '5px', marginTop: '8px', color:'blue'}}>Edit Profile</h5>
-                </Link>
-              </Button>
-              <Button>
-                <Link to={`/new`} style={{color:'blue'}}>
-                  <h5 style={{textAlign:'center', margin: '5px', marginTop: '8px', color:'blue'}}>New Profile</h5>
-                </Link>
-              </Button>
             </Card.Body>
           </Card>
         </div>
@@ -64,6 +54,11 @@ function Pet() {
 
   return (
     <div style={{display: "flex"}}>
+      <Button>
+        <Link to={`/new`} style={{color:'blue'}}>
+          <h5 style={{textAlign:'center', margin: '5px', marginTop: '8px', color:'blue'}}>New Profile</h5>
+        </Link>
+      </Button>
       {display}
     </div>
   );

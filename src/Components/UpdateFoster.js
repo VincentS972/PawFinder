@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
@@ -22,6 +23,15 @@ useEffect(() => {
 
 fetchData()
 }, [id, URL])
+
+const cancelButton = async () => {
+  const URL = `${process.env.REACT_APP_BACKEND_URI}/foster/${id}`
+  const response = await fetch(URL, {
+      method: 'GET'
+  })
+  navigate(`/foster/${id}`);
+  if (response.status !==204) console.log('error')
+}
 
 const deleteProfile = async () => {
   const URL = `${process.env.REACT_APP_BACKEND_URI}/foster/${id}`
@@ -48,7 +58,7 @@ const response = await fetch(URL, {
     body: JSON.stringify(fosterInput)
 })
     if (response.status !== 204) console.log('error!') // add error handling later
-        navigate(`/foster`)
+        navigate(`/foster/${id}`)
 }
 
 
@@ -97,6 +107,7 @@ const display = fosterInput && (
         <p>All fields are required.</p>
         <Button type='submit' variant='success'>Submit</Button>
         <Button variant='danger' onClick={deleteProfile}>Delete Profile</Button>
+        <Button variant='secondary' onClick={cancelButton}>Cancel</Button>
       </Form.Group>
     </Form>
   </div>
