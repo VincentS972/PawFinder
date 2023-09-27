@@ -1,7 +1,7 @@
 import React from "react";
 import DogCare from "./DogCare";
-import CatCare from "./CatCare";git 
-import { Card, Container, Row, Col } from "react-bootstrap"; 
+import CatCare from "./CatCare";
+import { Card, Container, Row, Col, Image } from "react-bootstrap"; 
 
 function PetCare() {
   return (
@@ -20,6 +20,10 @@ function PetCare() {
                 marginBottom: "15px",
               }}
             >
+              <div style={{ textAlign: "center" }}>
+                {'./public/images/Dog1.jpg'}
+                <Image style={{ height: "30%", width: "35%" }} src={require('./public/images/Dog1.jpg')} thumbnail />
+              </div>
               <DogCare />
             </Card>
           </Col>
@@ -32,6 +36,10 @@ function PetCare() {
                 marginBottom: "15px",
               }}
             >
+              <div style={{ textAlign: "center" }}>
+                {'./public/images/Cat1.jpg'}
+                <Image style={{ height: "30%", width: "35%" }} src={require('./public/images/Cat1.jpg')} thumbnail />
+              </div>
               <CatCare />
             </Card>
           </Col>
