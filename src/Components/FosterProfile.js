@@ -4,7 +4,7 @@ import { useParams, useNavigate } from "react-router-dom";
 
 const FosterProfile = () => {
   const navigate = useNavigate();
-  const [profile, setProfile] = useState(undefined);
+  const [profile, setProfile] = useState([]);
 
   const { id } = useParams();
   const URL = `${process.env.REACT_APP_BACKEND_URI}/foster/${id}`;

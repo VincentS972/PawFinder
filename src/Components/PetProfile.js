@@ -4,10 +4,10 @@ import { useParams, useNavigate } from "react-router-dom";
 
 const PetProfile = () => {
   const navigate = useNavigate();
-  const [profile, setProfile] = useState(undefined);
+  const [profile, setProfile] = useState([]);
 
   const { id } = useParams();
-  const URL = `${process.env.REACT_APP_BACKEND_URI}/pet/${id}`;
+  const URL = `${process.env.REACT_APP_BACKEND_URI}/pets/${id}`;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -29,12 +29,12 @@ const PetProfile = () => {
 
   const display = profile && (
     <div style={{ margin: "auto" }}>
-      <h1>{profile.userName}</h1>
+      <h1>{profile.petName}</h1>
       <img src={profile.profilePicture} />
-      <p>{profile.emailAddress}</p>
+      <p>{profile.fosterName}</p>
       <div>
         <h4>
-          {profile.firstName} {profile.lastName}
+          {profile.petType} {profile.petGender}
         </h4>
       </div>
 
