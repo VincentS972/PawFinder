@@ -21,8 +21,7 @@ function PetCare() {
               }}
             >
               <div style={{ textAlign: "center" }}>
-                {'./public/images/Dog1.jpg'}
-                <Image style={{ height: "30%", width: "35%" }} src={require('./public/images/Dog1.jpg')} thumbnail />
+                <Image style={{ height: "30%", width: "35%" }} src={require('./Dog1.jpg')} thumbnail />
               </div>
               <DogCare />
             </Card>
@@ -37,8 +36,7 @@ function PetCare() {
               }}
             >
               <div style={{ textAlign: "center" }}>
-                {'./public/images/Cat1.jpg'}
-                <Image style={{ height: "30%", width: "35%" }} src={require('./public/images/Cat1.jpg')} thumbnail />
+                <Image style={{ height: "30%", width: "35%" }} src={require('./Cat1.jpg')} thumbnail />
               </div>
               <CatCare />
             </Card>
