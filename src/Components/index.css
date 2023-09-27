@@ -1,18 +1,24 @@
 body, html {
     height: 100%;
+    background-image: url("./b-g.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
   }
 
 .bg {
-  background-image: url("./b-g.jpg");
+  /* background-image: url("./b-g.jpg");
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
+  position: inherit; */
+
 }
 
 .footer {
-  position:"absolute";
+  position:"center-bottom";
   bottom: 0;
   width: 100%;
   background-color: #8abcdd;
