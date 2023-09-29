@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import "./Components/index.css";
 import Navbar from './Components/NavBar';
 import Home from "./Components/Home";
 import Footer from "./Components/Footer";
@@ -36,7 +37,7 @@ function App() {
             <Route path="/About" element={<About />} />
             <Route path="/Adoption" element={<Adoption />} />
           </Routes>
-        <Footer />
+          <Footer />
       </Router>
     </div>
   );
