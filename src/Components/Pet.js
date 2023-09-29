@@ -50,11 +50,6 @@ function Pet() {
 
   return (
     <div style={{display: "flex"}}>
-      <Button>
-        <Link to={`/new`} style={{color:'blue'}}>
-          <h5 style={{textAlign:'center', margin: '5px', marginTop: '8px', color:'blue'}}>New Profile</h5>
-        </Link>
-      </Button>
       {display}
     </div>
   );

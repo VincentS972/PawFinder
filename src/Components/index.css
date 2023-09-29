@@ -6,7 +6,7 @@ body, html {
     background-attachment: fixed;
   }
 
-.bg {
+/* .bg {
   background-image: url("./b-g.jpg");
   height: 100vh;
   background-position: center;
@@ -15,7 +15,7 @@ body, html {
   z-index: -1;
   position: inherit;
 
-}
+} */
 
 .footer {
   position:"static";
