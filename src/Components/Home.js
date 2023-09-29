@@ -22,13 +22,12 @@ const Home = () => {
         <Carousel.Item>
           <Pet />
         </Carousel.Item>
-      </Carousel>
-      <Carousel activeIndex={index} onSelect={handleSelect}>
         <Carousel.Item>
           <Foster />
         </Carousel.Item>
       </Carousel>
     </div>
+
   )
 };
 
