@@ -4,7 +4,7 @@ import MissionStatement from './MissionStatement'
 
 function About() {
   return (
-    <div className='bg'>
+    <div>
       <div style={{ marginTop:"5px", textAlign:"center" }}>
        <Image style={{ height:"30%", width:"35%" }} src={require('./Woman&cat.jpg')} thumbnail />
       </div>

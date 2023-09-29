@@ -5,7 +5,7 @@ import { Card, Container, Row, Col } from "react-bootstrap";
 
 function PetCare() {
   return (
-    <div className="bg">
+    <div>
       <div className="text-center">
         <h1>Pet Care Tips for New Pet Owners</h1>
       </div>

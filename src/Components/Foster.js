@@ -1,7 +1,6 @@
 import React from "react";
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-// import { useParams, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
@@ -16,8 +15,8 @@ function Foster() {
       setFosters(data)
     }
 
-    fetchData()
-  }, [])
+    fetchData();
+  }, []);
 
   const display = fosters.map(foster => {
     return (
