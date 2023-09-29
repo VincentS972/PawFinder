@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import React from "react";
 import { useState, useEffect } from "react";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
@@ -51,7 +50,7 @@ function Pet() {
               </Link>
             </Button>
             <Button>
-              <Link to={`/pet/update/${pet._id}`} style={{color:'blue'}}>
+              <Link to={`/pets/update/${pet._id}`} style={{color:'blue'}}>
                 <h5 style={{textAlign:'center', margin: '5px', marginTop: '8px', color:'blue'}}>Edit Profile</h5>
               </Link>
             </Button>
