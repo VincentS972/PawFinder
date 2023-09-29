@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import CarouselFunc from "./carousel";
+import BackgroundImagePage from "./BackgroungImagePage";
 import Foster from "./Foster"
 import Pet from "./Pet"
 
@@ -38,14 +39,16 @@ const Home = () => {
     };
 
   return (
-    <Carousel activeIndex={index} onSelect={handleSelect}>
-      <Carousel.Item>
-        <Pet />
-      </Carousel.Item>
-      <Carousel.Item>
-        <Foster />
-      </Carousel.Item>
-    </Carousel>
+    <div className="bg">
+      <Carousel activeIndex={index} onSelect={handleSelect}>
+        <Carousel.Item>
+          <Pet />
+        </Carousel.Item>
+        <Carousel.Item>
+          <Foster />
+        </Carousel.Item>
+      </Carousel>
+    </div>
   )
 };
 

@@ -14,7 +14,7 @@ import PetCare from "./Components/PetCare"
 import UpdatePet from "./Components/UpdatePet";
 import UpdateFoster from "./Components/UpdateFoster";
 import New from "./Components/New"
-import Adoption from "./Components/Adoption"
+import Adoption from './Components/Adoption';
 
 
 function App() {
