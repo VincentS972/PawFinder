@@ -53,7 +53,7 @@ const PetProfile = () => {
     </div>
   );
 
-  return <div>{display}</div>;
+  return <div className="wrapper">{display}</div>;
 };
 
 export default PetProfile;

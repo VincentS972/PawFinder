@@ -53,7 +53,7 @@ const FosterProfile = () => {
     </div>
   );
 
-  return <div>{display}</div>;
+  return <div className="wrapper">{display}</div>;
 };
 
 export default FosterProfile;

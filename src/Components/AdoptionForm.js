@@ -1,9 +1,8 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Card, Image } from "react-bootstrap";
 
 
-function AdoptionForm() {
+function adoptionForm() {
   // Function to generate the pet adoption form
   function generateadoptionForm() {
     const formContainer = document.createElement("div");
@@ -16,8 +15,8 @@ function AdoptionForm() {
       <h2>Pet Adoption Application</h2>
       <p>Please follow these instructions:</p>
       <ol>
-        <li>Print this page.</li>
         <li>Complete the questionnaire.</li>
+        <li>Print this page.</li>
         <li>Take a picture or scan the completed form.</li>
         <li>Email the completed form and picture/scan to <a href="mailto:Admin@pawfinder.com">admin@pawfinder.com</a>.</li>
       </ol>
@@ -36,7 +35,8 @@ function AdoptionForm() {
           <option value="dog">Dog</option>
           <option value="cat">Cat</option>
         </select><br>
-<label for="experience">Pet Ownership Experience:</label><br>
+
+        <label for="experience">Pet Ownership Experience:</label><br>
         <input type="radio" id="experience-beginner" name="experience" value="beginner">
         <label for="experience-beginner">Beginner</label><br>
 
@@ -74,4 +74,4 @@ function AdoptionForm() {
   );
 }
 
-export default AdoptionForm;
+export default adoptionForm;

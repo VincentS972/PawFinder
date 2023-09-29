@@ -20,5 +20,6 @@ body, html {
 }
 
 .wrapper {
-  display: "flex";
+  width: auto;
+  display: flex;
 }

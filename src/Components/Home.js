@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Carousel from "react-bootstrap/Carousel";
-import BackgroundImagePage from "./BackgroungImagePage";
+import About from "./About"
+import PetCare from "./PetCare"
 import Foster from "./Foster"
 import Pet from "./Pet"
 
@@ -24,6 +25,12 @@ const Home = () => {
         </Carousel.Item>
         <Carousel.Item>
           <Foster />
+        </Carousel.Item>
+        <Carousel.Item>
+          <PetCare />
+        </Carousel.Item>
+        <Carousel.Item>
+          <About />
         </Carousel.Item>
       </Carousel>
     </div>

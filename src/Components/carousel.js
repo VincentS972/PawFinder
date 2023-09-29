@@ -1,5 +1,6 @@
 
 function CarouselFunc() {
+
   <div>
     {/* <img src={"cats-and-dogs.jpg"}></img> */}
   </div>
