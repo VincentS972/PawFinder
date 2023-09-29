@@ -1,7 +1,7 @@
 
 function CarouselFunc() {
-  <div>
-    <img src={"cats-and-dogs.jpg"}></img>
+  <div style={{zIndex:"1", align:"center"}}>
+    <img src="./cats-and-dogs.jpg" />
   </div>
 }
 
