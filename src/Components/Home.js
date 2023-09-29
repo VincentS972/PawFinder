@@ -1,10 +1,8 @@
 import { useState, useEffect } from "react";
 import Carousel from "react-bootstrap/Carousel";
-import Pet from "./Pet"
+import CarouselFunc from "./carousel";
 import Foster from "./Foster"
-import PetCare from "./PetCare"
-import BackgroundImagePage from "./BackgroungImagePage";
-// import Display from "./carousel";
+import Pet from "./Pet"
 
 
 
