@@ -42,7 +42,7 @@ function NewFoster() {
   //New Foster Form  
   return (
     <div className = "container-lg font-nice">
-      <Form className='p-3' onSubmit={handleSubmit} style={{backgroundColor:'#B5EB8D', color:"#217605"}} >
+      <Form className='p-3' onSubmit={handleSubmit} style={{backgroundColor:'#89CFF0', color:"white"}} >
         <Row className='mb-3'>
           <Form.Group as={Col} style={{textAlign:'center'}}>
             <Form.Label>
@@ -87,7 +87,7 @@ function NewFoster() {
         </Row>
         <Form.Group className='mb-3 mx-auto w-50' style={{textAlign: 'center'}}>
           <p>All fields are required.</p>
-          <Button type='submit' variant='success'>Submit</Button>
+          <Button type='submit' variant='primary'>Submit</Button>
         </Form.Group>
       </Form>
     </div>
