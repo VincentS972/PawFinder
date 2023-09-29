@@ -25,11 +25,11 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/Pet" element={<Pet />} />
-            <Route path="/Pet/PetProfile" element={<PetProfile />} />
+            <Route path="/Pet/:id" element={<PetProfile />} />
             <Route path="/Pet/update/:id" element={<UpdatePet/>}/>
             <Route path="/New" element={<New />} />
             <Route path="/Foster" element={<Foster />} />
-            <Route path="/Foster/FosterProfile" element={<FosterProfile />} />
+            <Route path="/Foster/:id" element={<FosterProfile />} />
             <Route path="/Foster/update/:id" element={<UpdateFoster/>}/>
             <Route path="/newFoster" element={<NewFoster />} />
             <Route path="/PetCare" element={<PetCare />} />

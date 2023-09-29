@@ -10,7 +10,7 @@ function generateAdoptionForm() {
       <li>Print this page.</li>
       <li>Complete the questionnaire.</li>
       <li>Take a picture or scan the completed form.</li>
-      <li>Email the completed form and a picture/scan to <a href="mailto:Admin@pawfinder.com">admin@pawfinder.com</a>.</li>
+      <li>Email the completed form and  picture/scan to <a href="mailto:Admin@pawfinder.com">admin@pawfinder.com</a>.</li>
     </ol>
     <form>
       <label for="name">Your Name:</label>
