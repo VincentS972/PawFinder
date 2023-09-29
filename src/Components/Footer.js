@@ -3,9 +3,7 @@ import "./index.css";
 
 const Footer = () => {
   return (
-    
-    <Container style={{ justifyContent:"center", width:"100%" }} >
-   <div style={{ width:"100%", bottom:"0", position:"static", textAlign:"center", backgroundColor: "#8abcdd" }} >
+    <div className="footer">
       <h4 style={{ color: "white", textAlign: "center", marginBottom: "10px" }}>
         Follow us on Social Media !
       </h4>
@@ -36,9 +34,7 @@ const Footer = () => {
       <div style={{ color:"white" }}>
         <p> Copyright © 2023 | PawFinder</p>
       </div>
-      </div>
-    </Container>
-   
+    </div>
   );
 };
 
