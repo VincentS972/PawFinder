@@ -44,7 +44,7 @@ function Foster() {
   });
 
   return (
-    <div style={{display: "flex"}}>
+    <div className="bg" style={{display: "flex"}}>
       <Button>
         <Link to={`/newFoster`} style={{color:'blue'}}>
           <h5 style={{textAlign:'center', margin: '5px', marginTop: '8px', color:'blue'}}>New Profile</h5>
