@@ -28,24 +28,6 @@ export default About;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // const About = () => {
 //   return (
 //     <div className="bg">
