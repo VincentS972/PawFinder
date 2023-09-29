@@ -20,18 +20,18 @@ function Pet() {
 
   const display = pets.map(pet => {
     return (
-      <div className="wrapper">
-        <div style={{ textAlign:"center", display:"flex" }}>
+        <div style={{ textAlign:"center", display:"flex"}}>
           <Card style={{ 
             width: '18rem',
             display: 'inline-block',
             margin: '5px',
+            backgroundColor: '#f2adf7'
           }} key={pet._id}>
             <Card.Img variant="top" src={pet.profilePicture} />
             <Card.Body>
               <Card.Title>
-                <Link to={`/pet/${pet._id}`} style={{color:'blue'}}>
-                  <h5 style={{textAlign:'center', marginTop: '8px', color:'blue'}}>{pet.petName}</h5>
+                <Link to={`/pet/${pet._id}`} style={{textDecoration:'inherit'}}>
+                  <h5 style={{textAlign:'center', marginTop: '8px', color:'#c20ecf'}}>{pet.petName}</h5>
                 </Link>
               </Card.Title>
               <Card.Text>
@@ -40,20 +40,17 @@ function Pet() {
               <Card.Text>
                 Bio: {pet.petBio}
               </Card.Text>
-              <Button>
-                <Link to={`/Adoption`} style={{color:'blue'}}>
-                  <h5 style={{textAlign:'center', margin: '5px', marginTop: '8px', color:'blue'}}>Adopt</h5>
-                </Link>
+              <Button href="/Adoption" variant="light">
+                  <h5 style={{textAlign:'center', margin: '5px', marginTop: '8px', color:'#8abcdd'}}>Adopt</h5>
               </Button>
             </Card.Body>
           </Card>
         </div>
-      </div>
     );
   });
 
   return (
-    <div style={{display: "flex"}}>
+    <div className="wrapper">
       {display}
     </div>
   );

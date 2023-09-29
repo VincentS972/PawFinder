@@ -17,6 +17,15 @@ function NewFoster() {
     emailAddress: "",
   });
 
+  const cancelButton = async () => {
+    const URL = `${process.env.REACT_APP_BACKEND_URI}/foster`
+    const response = await fetch(URL, {
+        method: 'GET'
+    })
+    navigate(`/foster`);
+    if (response.status !==204) console.log('error')
+  }
+
   const handleChange = (e) => {
     const value = e.target.value;
     setFosterInput({
@@ -88,6 +97,7 @@ function NewFoster() {
         <Form.Group className='mb-3 mx-auto w-50' style={{textAlign: 'center'}}>
           <p>All fields are required.</p>
           <Button type='submit' variant='primary'>Submit</Button>
+          <Button variant='secondary' onClick={cancelButton}>Cancel</Button>
         </Form.Group>
       </Form>
     </div>
