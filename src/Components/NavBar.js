@@ -22,22 +22,26 @@ function NavBar() {
                     </Container>
                   </Navbar>
                 <Nav.Item >
-                 <Nav.Link style={{ color: 'white', textDecoration: 'inherit' }} href="/">Home</Nav.Link>
+                 <Nav.Link href="/">Home</Nav.Link>
                  </Nav.Item>
-                  <NavDropdown style={{ color: 'white', textDecoration: 'inherit'}} title="Pets"  id="collapsible-nav-dropdown" >
+                 <Nav.Item>
+                  <NavDropdown title="Pets"  id="collapsible-nav-dropdown" >
                     <NavDropdown.Item href="/Pet">Find a Pet</NavDropdown.Item>
                     <NavDropdown.Item href="/New">Add a Pet</NavDropdown.Item>
                     <NavDropdown.Item href="/Adoption">Adopt a Pet</NavDropdown.Item>
                  </NavDropdown>
-                 <NavDropdown style={{ color: 'white', textDecoration: 'inherit'}} title="Fosters"  id="collapsible-nav-dropdown" >
+                 </Nav.Item>
+                 <Nav.Item >
+                 <NavDropdown title="Fosters" id="basic-nav-dropdown" >
                     <NavDropdown.Item href="/Foster">Our Fosters</NavDropdown.Item>
                     <NavDropdown.Item href="/newFoster">Become a Foster</NavDropdown.Item>
                  </NavDropdown>
+                 </Nav.Item>
                  <Nav.Item>
-                 <Nav.Link style={{ color: 'white', textDecoration: 'inherit'}} href="/PetCare">Pet Care</Nav.Link>
+                 <Nav.Link href="/PetCare">Pet Care</Nav.Link>
                  </Nav.Item>
                  <Nav.Item >
-                 <Nav.Link style={{ color: 'white', textDecoration: 'inherit' }} href="/About">About</Nav.Link>
+                 <Nav.Link href="/About">About</Nav.Link>
                  </Nav.Item>
                  <Nav.Item >
                  <Nav.Link style={{ color: 'white', textDecoration: 'inherit' }} href="/Adoption">Adopt</Nav.Link>

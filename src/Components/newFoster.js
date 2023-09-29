@@ -42,7 +42,7 @@ function NewFoster() {
   //New Foster Form  
   return (
     <div className = "container-lg font-nice">
-      <Form className='p-3' onSubmit={handleSubmit} style={{backgroundColor:'#89CFF0', color:"white"}} >
+      <Form className='p-3' onSubmit={handleSubmit} style={{backgroundColor:'#8abcdd', color:"white"}} >
         <Row className='mb-3'>
           <Form.Group as={Col} style={{textAlign:'center'}}>
             <Form.Label>
