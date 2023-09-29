@@ -56,7 +56,7 @@ const response = await fetch(URL, {
 
 const display = petInput && (
 <div className = "container-lg font-nice">
-      <Form className='p-3' onSubmit={handleSubmit} style={{backgroundColor:'#B5EB8D', color:"#217605"}} >
+      <Form className='p-3' onSubmit={handleSubmit} style={{backgroundColor:'#8abcdd', color:"white"}} >
         <Row className='mb-3'>
           <Form.Group as={Col} style={{textAlign:'center'}}>
             <Form.Label>
@@ -145,8 +145,8 @@ const display = petInput && (
 
         <Form.Group className='mb-3 mx-auto w-50' style={{textAlign: 'center'}}>
           <p>All fields are required.</p>
-          <Button type='submit' variant='success'>Submit</Button>
-          <Button variant='secondary' onClick={cancelButton}>Cancel</Button>
+          <Button type='submit' variant='primary'>Submit</Button>
+          <Button variant='dark' onClick={cancelButton}>Cancel</Button>
         </Form.Group>
       </Form>
     </div>

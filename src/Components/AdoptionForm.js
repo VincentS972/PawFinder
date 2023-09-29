@@ -8,6 +8,11 @@ function AdoptionForm() {
   function generateadoptionForm() {
     const formContainer = document.createElement("div");
     formContainer.innerHTML = `
+    <style>
+    p {text-align: left;}
+    ol {text-align: left;}
+    form {text-align: left;}
+    </style>
       <h2>Pet Adoption Application</h2>
       <p>Please follow these instructions:</p>
       <ol>
@@ -44,7 +49,6 @@ function AdoptionForm() {
         <label for="message">Why do you want to adopt a pet?</label><br>
         <textarea id="message" name="message" rows="4" required></textarea><br>
 
-        <input type="submit" value="Submit Application">
       </form>
     `;
 

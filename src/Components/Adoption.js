@@ -14,7 +14,7 @@ function Adoption() {
           border: '2px solid white',
           margin: '15px',
           backgroundColor: "#8abcdd",
-          width: '50%',
+          width: '32%',
           padding: '15px'
         }}>
           <AdoptionForm /> {/* Render the AdoptionForm component */}
