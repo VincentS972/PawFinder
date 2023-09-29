@@ -38,7 +38,7 @@ function NavBar() {
                  </NavDropdown>
                  </Nav.Item>
                  <Nav.Item>
-                 <Nav.Link href="/PetCare">Pet Care</Nav.Link>
+                 <Nav.Link href="PetCare">Pet Care</Nav.Link>
                  </Nav.Item>
                  <Nav.Item >
                  <Nav.Link href="/About">About</Nav.Link>

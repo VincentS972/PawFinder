@@ -1,8 +1,11 @@
+import { Card, Container } from "react-bootstrap";
 import "./index.css";
 
 const Footer = () => {
   return (
-    <div className="footer">
+    
+    <Container style={{ justifyContent:"center", width:"100%" }} >
+   <div style={{ width:"100%", bottom:"0", position:"static", textAlign:"center", backgroundColor: "#8abcdd" }} >
       <h4 style={{ color: "white", textAlign: "center", marginBottom: "10px" }}>
         Follow us on Social Media !
       </h4>
@@ -33,7 +36,9 @@ const Footer = () => {
       <div style={{ color:"white" }}>
         <p> Copyright © 2023 | PawFinder</p>
       </div>
-    </div>
+      </div>
+    </Container>
+   
   );
 };
 

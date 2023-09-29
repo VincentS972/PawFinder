@@ -1,10 +1,9 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import "./Components/index.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Navbar from './Components/NavBar';
 import Home from "./Components/Home";
-import Footer from "./Components/Footer";
 import Pet from "./Components/Pet";
 import PetProfile from './Components/PetProfile';
 import NewFoster from './Components/newFoster';
@@ -16,6 +15,7 @@ import UpdatePet from "./Components/UpdatePet";
 import UpdateFoster from "./Components/UpdateFoster";
 import New from "./Components/New"
 import Adoption from './Components/Adoption';
+import Footer from "./Components/Footer";
 
 
 function App() {
