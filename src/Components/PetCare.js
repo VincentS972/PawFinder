@@ -1,6 +1,6 @@
 import React from "react";
 import DogCare from "./DogCare";
-import CatCare from "./CatCare"; 
+import CatCare from "./CatCare";
 import { Card, Container, Row, Col } from "react-bootstrap"; 
 
 function PetCare() {
