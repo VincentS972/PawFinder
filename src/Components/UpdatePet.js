@@ -23,13 +23,13 @@ useEffect(() => {
 fetchData()
 }, [id, URL])
 
-const deleteProfile = async () => {
-  const URL = `${process.env.REACT_APP_BACKEND_URI}/pets/${id}`
+const cancelButton = async () => {
+  const URL = `${process.env.REACT_APP_BACKEND_URI}/pet/${id}`
   const response = await fetch(URL, {
-      method: 'DELETE'
+      method: 'GET'
   })
-  navigate('/pet');
-  if (response.status !==204) console.log('error')   
+  navigate(`/pet/${id}`);
+  if (response.status !==204) console.log('error')
 }
 
 const handleChange = (e) => {
@@ -48,7 +48,7 @@ const response = await fetch(URL, {
     body: JSON.stringify(petInput)
 })
     if (response.status !== 204) console.log('error!') // add error handling later
-        navigate(`/pet`)
+        navigate(`/pet/${id}`)
 }
 
 
@@ -146,7 +146,7 @@ const display = petInput && (
         <Form.Group className='mb-3 mx-auto w-50' style={{textAlign: 'center'}}>
           <p>All fields are required.</p>
           <Button type='submit' variant='success'>Submit</Button>
-          <Button variant='danger' onClick={deleteProfile}>Delete Profile</Button>
+          <Button variant='secondary' onClick={cancelButton}>Cancel</Button>
         </Form.Group>
       </Form>
     </div>

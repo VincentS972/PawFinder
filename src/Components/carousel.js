@@ -1,3 +1,15 @@
+
+function CarouselFunc() {
+  <div>
+    <img src={"cats-and-dogs.jpg"}></img>
+  </div>
+}
+
+export default CarouselFunc
+
+
+
+
 // import Carousel from "react-multi-carousel";
 // import "react-multi-carousel/lib/styles.css";
 

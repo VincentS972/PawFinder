@@ -1,10 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import Button from 'react-bootstrap/Button';
 
 const FosterProfile = () => {
   const navigate = useNavigate();
-  const [profile, setProfile] = useState(undefined);
+  const [profile, setProfile] = useState([]);
 
   const { id } = useParams();
   const URL = `${process.env.REACT_APP_BACKEND_URI}/foster/${id}`;
@@ -18,13 +19,22 @@ const FosterProfile = () => {
     fetchData();
   }, [id, URL]);
 
+  const editButton = async () => {
+    const URL = `${process.env.REACT_APP_BACKEND_URI}/foster/${id}`
+    const response = await fetch(URL, {
+        method: 'POST'
+    })
+    navigate(`/foster/update/${id}`);
+    if (response.status !==204) console.log('error')
+  }
+
   //deletes the current profile from database
   const handleDelete = async (e) => {
     const response = await fetch(URL, {
       method: "delete",
     });
     if (response.status !== 204) console.log("error");
-    navigate("/");
+    navigate("/foster");
   };
 
   const display = profile && (
@@ -38,8 +48,8 @@ const FosterProfile = () => {
         </h4>
       </div>
 
-      <a href={`/foster/update/${id}`}>Update</a>
-      <button onClick={handleDelete}>Delete</button>
+      <Button variant='primary' onClick={editButton}>Edit Profile</Button>
+      <Button variant='danger' onClick={handleDelete}>Delete Profile</Button>
     </div>
   );
 
