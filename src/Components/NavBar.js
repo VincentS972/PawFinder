@@ -2,6 +2,7 @@ import Navbar from "react-bootstrap/Navbar";
 import { NavbarBrand } from "react-bootstrap";
 import Container from 'react-bootstrap/Container';
 import { Nav } from "react-bootstrap";
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function NavBar() {
     return (
@@ -23,12 +24,15 @@ function NavBar() {
                 <Nav.Item >
                  <Nav.Link style={{ color: 'white', textDecoration: 'inherit' }} href="/">Home</Nav.Link>
                  </Nav.Item>
-                 <Nav.Item>
-                 <Nav.Link style={{ color: 'white', textDecoration: 'inherit'}} href="/Pet">Our Pets</Nav.Link>
-                 </Nav.Item>
-                 <Nav.Item>
-                 <Nav.Link style={{ color: 'white', textDecoration: 'inherit'}} href="/Foster">Our Fosters</Nav.Link>
-                 </Nav.Item>
+                  <NavDropdown style={{ color: 'white', textDecoration: 'inherit'}} title="Pets"  id="collapsible-nav-dropdown" >
+                    <NavDropdown.Item href="/Pet">Find a Pet</NavDropdown.Item>
+                    <NavDropdown.Item href="/New">Add a Pet</NavDropdown.Item>
+                    <NavDropdown.Item href="/Adoption">Adopt a Pet</NavDropdown.Item>
+                 </NavDropdown>
+                 <NavDropdown style={{ color: 'white', textDecoration: 'inherit'}} title="Fosters"  id="collapsible-nav-dropdown" >
+                    <NavDropdown.Item href="/Foster">Our Fosters</NavDropdown.Item>
+                    <NavDropdown.Item href="/newFoster">Become a Foster</NavDropdown.Item>
+                 </NavDropdown>
                  <Nav.Item>
                  <Nav.Link style={{ color: 'white', textDecoration: 'inherit'}} href="/PetCare">Pet Care</Nav.Link>
                  </Nav.Item>
