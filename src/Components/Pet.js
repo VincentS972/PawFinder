@@ -41,7 +41,7 @@ function Pet() {
                 Bio: {pet.petBio}
               </Card.Text>
               <Button>
-                <Link to={`/`} style={{color:'blue'}}>
+                <Link to={`/Adoption`} style={{color:'blue'}}>
                   <h5 style={{textAlign:'center', margin: '5px', marginTop: '8px', color:'blue'}}>Adopt</h5>
                 </Link>
               </Button>
