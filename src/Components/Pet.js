@@ -20,7 +20,7 @@ function Pet() {
 
   const display = pets.map(pet => {
     return (
-        <div style={{ textAlign:"center"}}>
+        <div style={{ textAlign:"center", display:"flex"}}>
           <Card style={{ 
             width: '18rem',
             display: 'inline-block',
