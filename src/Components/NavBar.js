@@ -35,6 +35,9 @@ function NavBar() {
                  <Nav.Item >
                  <Nav.Link style={{ color: 'white', textDecoration: 'inherit' }} href="/About">About</Nav.Link>
                  </Nav.Item>
+                 <Nav.Item >
+                 <Nav.Link style={{ color: 'white', textDecoration: 'inherit' }} href="/Adoption">Adopt</Nav.Link>
+                 </Nav.Item>
            </Nav>
        </div>
     );
